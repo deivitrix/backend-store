@@ -16,6 +16,7 @@ export class ProductoService {
     @InjectModel('Resenia') private reseniaModel: Model<Resenia>,
   ) {}
 
+  //producto
   async getProduct() {
     return await this.productModel.find();
   }

@@ -11,6 +11,7 @@ import { ConfigModule } from '@nestjs/config';
 import { environments } from './environments';
 import config from './config';
 import { MulterModule } from '@nestjs/platform-express';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { MulterModule } from '@nestjs/platform-express';
     MulterModule.register({
       dest: './upload',
     }),
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],

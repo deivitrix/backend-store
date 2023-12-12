@@ -8,6 +8,7 @@ import { Marca } from './interfaces/Marca';
 export class ProductoController {
   constructor(private productServive: ProductoService) {}
 
+  //producto
   @Get()
   getProduct(): Promise<Product[]> {
     return this.productServive.getProduct();
@@ -22,4 +23,6 @@ export class ProductoController {
   getMarca(): Promise<Marca[]> {
     return this.productServive.getMarca();
   }
+
+  //resenia
 }

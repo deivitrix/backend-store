@@ -4,6 +4,11 @@ import * as express from 'express';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors({
+    origin: 'http://localhost:4200',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  });
   app.use(express.static('upload')); // mindware para poner la carpeta de upload static
   await app.listen(3000);
 }
