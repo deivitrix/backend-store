@@ -8,5 +8,6 @@ export const UserSchema = new mongoose.Schema({
   correo: String,
   password: String,
   tipo_usuario: String,
+  imagen:String,
   status: Boolean,
 });

@@ -5,7 +5,8 @@ export class CreateProductDto {
   id_marca: string;
   ingrediente: string;
   declaracion: string;
-  fecha: string;
+  fechapublicacion: string;
+  fechaproximo: string;
   stock: number;
   imagen: string;
   status: boolean;

@@ -26,11 +26,15 @@ export class ImagenController {
     const imagePath = join(__dirname, '..', '..', 'upload', imageName);
 
     if (!fs.existsSync(imagePath)) {
-      return res.status(404).send('Imagen no encontrada');
+      return res
+        .status(404)
+        .send({ statusCode: 404, data: '', mensaje: 'Imagen no encontrada' });
     }
 
     // Devuelve la imagen al cliente
-    return res.sendFile(imagePath);
+    // console.log(imagePath);
+
+    return res.status(200).sendFile(imagePath);
   }
 
   //subir imagen para obtener el nombre de la imagen

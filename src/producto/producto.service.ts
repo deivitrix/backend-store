@@ -27,7 +27,6 @@ export class ProductoService {
   }
 
   //Marca
-
   async createMarca(marca: CreateMarcaDto) {
     const newMarca = new this.marcaModel(marca);
     return await newMarca.save();

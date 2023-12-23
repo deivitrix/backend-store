@@ -13,8 +13,13 @@ export class UserService {
     return await this.userModel.find();
   }
 
+  async getUser_one(_id: string): Promise<any> {
+    return await this.userModel
+      .findOne({ _id })
+      .select('nombre apellido direccion telefono correo tipo_usuario imagen');
+  }
+
   async getUser_login(correo: string, password: string): Promise<any> {
-    // console.log(correo + password);
     return await this.userModel
       .findOne({ correo, password })
       .select('status tipo_usuario _id');

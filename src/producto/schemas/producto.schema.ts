@@ -7,7 +7,8 @@ export const ProductSchema = new mongoose.Schema({
   id_marca: String,
   ingrediente: String,
   declaracion: String,
-  fecha: String,
+  fechapublicacion: String,
+  fechaproximo: String,
   stock: Number,
   imagen: String,
   status:Boolean

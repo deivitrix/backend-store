@@ -9,5 +9,6 @@ export interface User extends Document {
   correo: string;
   password: string;
   tipo_usuario: string;
+  imagen:string;
   status: boolean;
 }
